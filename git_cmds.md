@@ -110,8 +110,8 @@ or
 $ git push origin --delete <tag-name>
 ```
 
-<!-- git log -->
 ## **Search History**
+<!-- git log -->
 
 ## **Branching**
 ### 1 Create branch
@@ -167,4 +167,30 @@ Show whether each branch is merged into the \<branch-name\>
 ```terminal
 $ git branch --merged <branch-name>
 $ git branch --no-merged <branch-name>
+```
+
+## Git On Server
+### 1 Protocols
+#### 1.1 Local protocol
+Clone from local filesystem
+```terminal
+$ git clone <local-git-repo-address>
+$ git clone file:://<local-git-repo-address>
+```
+Example
+```terminal
+$ git clone file::///srv/git/project.git
+```
+Add a local repository to a git project
+```terminal
+$ git remote add <local-project-name> <local-git-repo-address>
+```
+#### 1.2 HTTP protocol
+<!-- To be edited -->
+
+#### 1.3 SSH protocol
+Pay attention to when to use / or :
+```terminal
+$ git clone ssh://[user@]<server-address>/<project-name>.git
+$ git clone [user@]<server-address>:<project-name>
 ```

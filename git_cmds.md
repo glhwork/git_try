@@ -194,3 +194,14 @@ Pay attention to when to use / or :
 $ git clone ssh://[user@]<server-address>/<project-name>.git
 $ git clone [user@]<server-address>:<project-name>
 ```
+
+## Distributed Git Operations
+# 1 Contribute to git
+Our submission should not contain any whitespace error, to find such errors, run this command before committing
+```terminal
+$ git diff --check
+```
+Partially stage files, read more in Interactive-Staging on Page128
+```terminal
+$ git add --patch
+```

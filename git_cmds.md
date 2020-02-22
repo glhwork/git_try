@@ -115,21 +115,32 @@ $ git push origin --delete <tag-name>
 
 ## **Branching**
 ### 1 Create branch
-In order 
-
-    A. create a new branch 
-    B. switch to new branch 
-    C. create a new branch and switch to it at once
-    D. view which branch is currently on
-    E. delete branch
-    F. force to delete branch
-
+A. create a new branch starts from where the HEAD is
 ```terminal
 $ git branch <branch-name>
+```
+B. create a new branch starts from \<start-place\>
+```terminal
+$ git branch <branch-name> <start-place>
+```
+C. switch to new branch
+```terminal
 $ git checkout <branch-name>
+```
+D. create a new branch and switch to it at once
+```terminal
 $ git checkout -b <branch-name>
+```
+E. view which branch is currently on
+```terminal
 $ git log --decorate
+```
+F. delete branch
+```terminal
 $ git branch -d <branch-name>
+```
+G. force to delete branch
+```terminal
 $ git branch -D <branch-name>
 ```
 The new branch will start at where the current branch we are on

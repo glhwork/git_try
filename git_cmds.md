@@ -216,3 +216,42 @@ Partially stage files, read more in Interactive-Staging on Page128
 ```terminal
 $ git add --patch
 ```
+
+## Remote Git Operations
+Get a repository
+<!-- url : uniform resource locator -->
+```terminal
+$ git clone <url>
+$ git clone <url> <new-dir-name>
+```
+To see which remote servers(in short name) we have configured and the corresponding url
+```terminal
+$ git remote
+$ git remote -v
+```
+Add new remote repositories
+```terminal
+$ git remote add <remote-name> <url>
+```
+Get information from a remote for a certain branch
+```terminal
+$ git fetch <remote-name> <branch-name>
+```
+Get information from a remote for branches we don't yet have
+```terminal
+$ git fetch <remote-name>
+```
+Push to remote to share project
+```terminal
+$ git push <remote-name> <branch-name>
+```
+To see details of relationship between remote and local
+```terminal
+$ git remote show <remote-name>
+```
+Rename or remove a remote
+```terminal
+$ git remote rename <old> <new>
+$ git remote remove <remote-name>
+$ git remote rm <remote-name>
+```

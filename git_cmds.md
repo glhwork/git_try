@@ -143,7 +143,14 @@ G. force to delete branch
 ```terminal
 $ git branch -D <branch-name>
 ```
-The new branch will start at where the current branch we are on
+Particularly, if we want start our work based on one of our tags
+```terminal
+$ git checkout -b <branch-name> <tag>
+```
+or based on one of the commit
+```terminal
+$ git checkout -b <branch-name> <part-of-commit-checksum>
+```
 
 ### 2 Merge
 Merge the \<branch-name\> with the current branch the HEAD is on

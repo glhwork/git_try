@@ -225,6 +225,7 @@ $ git add --patch
 ```
 
 ## Remote Git Operations
+### 1 Interaction with remote
 Get a repository
 <!-- url : uniform resource locator -->
 ```terminal
@@ -261,4 +262,42 @@ Rename or remove a remote
 $ git remote rename <old> <new>
 $ git remote remove <remote-name>
 $ git remote rm <remote-name>
+```
+### 2 Remote branches
+Get full list of remote references
+```terminal
+$ git ls-remote <remote-name>
+$ git remote show <remote-name>
+```
+Use /<new-remote-name/> as default remote name rather then 'origin'
+```terminal
+$ git clone -o <new-remote-name>
+```
+Push to share
+```terminal
+$ git push <remote-name> <branch-name>
+```
+If we want to rename the remote branch which is different from the local branch
+```terminal
+$ git push <remote-name> <local-branch-name>:<new-name-of-remote-branch>
+```
+To get a local branch to track a remote branch, either of the two commands takes effect
+```terminal
+$ git checkout -b <local-branch-name> <remote-name>/<remote-branch-name>
+$ git checkout --track <remote-name>/<remote-branch-name>
+```
+To set up the current local branch to track a remote branch
+
+'-u' option refers to '--set-upstream-to'
+```terminal
+$ git branch -u <remote-name>/<remote-branch-name>
+```
+To see what tracking branches we have set up
+```terminal
+$ git branch -vv
+```
+If we want to assure the ahead and behind numbers up-to-date, try these commands in order
+```terminal
+$ git fetch --all
+$ git branch -vv
 ```

@@ -35,7 +35,8 @@ Then "git list" takes the same effect as "ls" in terminal
 
 ## **Undo Things**
 ### 1 Modify last commit
-If we forget something to be added to last commit or if we just want to modify the latest commit message, use this command 
+If we forget something to be added to last commit or if we just want to modify 
+the latest commit message, use this command 
 ```terminal
 $ git commit --amend 
 $ git commit --amend <file-name>
@@ -61,7 +62,8 @@ $ git reset HEAD <file-name>
 ### 3 Unmodify files
 If we want to discard the latest modification, use this command
 
-**But attention! This command is dangerous, unless we are very clear about what content we are going to remove**
+**But attention! This command is dangerous, unless we are very clear about what 
+content we are going to remove**
 ```terminal
 $ git checkout -- <file-name>
 ```
@@ -161,11 +163,13 @@ Another way to merge branchs is rebasing
 ```terminal
 $ git rebase <branch-name>
 ```
-Rebase patches which start where branch-b diverges from branch-a to \<branch-master\>
+Rebase patches which start where branch-b diverges from branch-a 
+to \<branch-master\>
 ```terminal
 $ git rebase --onto <branch-master> <branch-name-a> <branch-name-b>
 ```
-If the "rebase" of another developer makes us mess up our own development, this helps us out
+If the "rebase" of another developer makes us mess up our own development, this 
+helps us out
 ```terminal
 $ git rebase <remote-name>/<branch-name>
 ```
@@ -214,8 +218,9 @@ $ git clone [user@]<server-address>:<project-name>
 ```
 
 ## Distributed Git Operations
-# 1 Contribute to git
-Our submission should not contain any whitespace error, to find such errors, run this command before committing
+### 1 Contribute to git
+Our submission should not contain any whitespace error, to find such errors, 
+run this command before committing
 ```terminal
 $ git diff --check
 ```
@@ -232,7 +237,8 @@ Get a repository
 $ git clone <url>
 $ git clone <url> <new-dir-name>
 ```
-To see which remote servers(in short name) we have configured and the corresponding url
+To see which remote servers(in short name) we have configured and the 
+corresponding url
 ```terminal
 $ git remote
 $ git remote -v
@@ -269,7 +275,7 @@ Get full list of remote references
 $ git ls-remote <remote-name>
 $ git remote show <remote-name>
 ```
-Use /<new-remote-name/> as default remote name rather then 'origin'
+Use \<new-remote-name\> as default remote name rather then 'origin'
 ```terminal
 $ git clone -o <new-remote-name>
 ```
@@ -281,7 +287,8 @@ If we want to rename the remote branch which is different from the local branch
 ```terminal
 $ git push <remote-name> <local-branch-name>:<new-name-of-remote-branch>
 ```
-To get a local branch to track a remote branch, either of the two commands takes effect
+To get a local branch to track a remote branch, either of the two commands 
+takes effect
 ```terminal
 $ git checkout -b <local-branch-name> <remote-name>/<remote-branch-name>
 $ git checkout --track <remote-name>/<remote-branch-name>
@@ -292,11 +299,16 @@ To set up the current local branch to track a remote branch
 ```terminal
 $ git branch -u <remote-name>/<remote-branch-name>
 ```
+or set up a \<local-branch-name\> to track a remote branch
+```terminal
+$ git branch -u <remote-name>/<remote-branch-name> <local-branch-name>
+```
 To see what tracking branches we have set up
 ```terminal
 $ git branch -vv
 ```
-If we want to assure the ahead and behind numbers up-to-date, try these commands in order
+If we want to assure the ahead and behind numbers up-to-date, try these commands
+in order
 ```terminal
 $ git fetch --all
 $ git branch -vv

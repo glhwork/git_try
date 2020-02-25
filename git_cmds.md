@@ -313,3 +313,13 @@ in order
 $ git fetch --all
 $ git branch -vv
 ```
+Fetch a remote branch and merge immediately
+
+Which branch to fetch is determined by 'tracking branch' set up by users
+```terminal
+$ git pull
+```
+Remove remote branches
+```terminal
+$ git push <remote-name> --delete <remote-branch-name>
+```

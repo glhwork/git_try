@@ -90,7 +90,7 @@ Add lightweight tag and show the information of this tag
 $ git tag <tag-name>
 $ git show <tag-name>
 ```
-Add tag with a certain commit message
+Add tag with a certain commit checksum
 ```terminal
 $ git tag -a <tag-name> <part-of-commit-checksum>
 ```
@@ -160,6 +160,8 @@ Merge the \<branch-name\> with the current branch the HEAD is on
 $ git merge <branch-name>
 ```
 Another way to merge branchs is rebasing
+
+Replay the changes of the branch we are currently on to the \<branch-name\>
 ```terminal
 $ git rebase <branch-name>
 ```
@@ -167,6 +169,10 @@ Rebase patches which start where branch-b diverges from branch-a
 to \<branch-master\>
 ```terminal
 $ git rebase --onto <branch-master> <branch-name-a> <branch-name-b>
+```
+Rebase patches on branch-b to branch-a
+```terminal
+$ git rebase <branch-a> <branch-b>
 ```
 If the "rebase" of another developer makes us mess up our own development, this 
 helps us out
@@ -211,7 +217,7 @@ $ git remote add <local-project-name> <local-git-repo-address>
 <!-- To be edited -->
 
 #### 1.3 SSH protocol
-Pay attention to when to use / or :
+Pay attention to when to use '/' or ':'
 ```terminal
 $ git clone ssh://[user@]<server-address>/<project-name>.git
 $ git clone [user@]<server-address>:<project-name>
@@ -227,6 +233,12 @@ $ git diff --check
 Partially stage files, read more in Interactive-Staging on Page128
 ```terminal
 $ git add --patch
+```
+Compare differences between two branches
+
+Display commits on branch-b that are not on branch-a
+```terminal
+$ git log --no-merges <branch-a>..<branch-b>
 ```
 
 ## Remote Git Operations
